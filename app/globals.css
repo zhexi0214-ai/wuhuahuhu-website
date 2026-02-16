@@ -3,20 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 240, 240, 240;
-  --background-start-rgb: 10, 10, 10;
-  --background-end-rgb: 5, 5, 5;
-  --neon-orange: #FF7E33; /* 象征“火花的初现” [cite: 224] */
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
-  min-height: 100vh;
+  color: var(--foreground);
+  background: var(--background);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-.glass-panel {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+/* 强制清除 Vercel 可能残留的默认样式 */
+* {
+  box-sizing: border-box;
 }
